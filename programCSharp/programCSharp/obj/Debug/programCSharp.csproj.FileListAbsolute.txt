@@ -1,0 +1,10 @@
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\programCSharp\programCSharp\bin\Debug\programCSharp.exe.config
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\programCSharp\programCSharp\bin\Debug\programCSharp.exe
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\programCSharp\programCSharp\bin\Debug\programCSharp.pdb
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\programCSharp\programCSharp\obj\Debug\programCSharp.csproj.AssemblyReference.cache
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\programCSharp\programCSharp\obj\Debug\programCSharp.Main.resources
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\programCSharp\programCSharp\obj\Debug\programCSharp.Properties.Resources.resources
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\programCSharp\programCSharp\obj\Debug\programCSharp.csproj.GenerateResource.cache
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\programCSharp\programCSharp\obj\Debug\programCSharp.csproj.CoreCompileInputs.cache
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\programCSharp\programCSharp\obj\Debug\programCSharp.exe
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\programCSharp\programCSharp\obj\Debug\programCSharp.pdb
