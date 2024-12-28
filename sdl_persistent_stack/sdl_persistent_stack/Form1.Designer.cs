@@ -34,13 +34,14 @@ namespace sdl_persistent_stack
             this.redoBtn = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btnPeek = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(17, 114);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(1066, 541);
@@ -50,7 +51,7 @@ namespace sdl_persistent_stack
             // undoBtn
             // 
             this.undoBtn.Location = new System.Drawing.Point(821, 18);
-            this.undoBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.undoBtn.Margin = new System.Windows.Forms.Padding(4);
             this.undoBtn.Name = "undoBtn";
             this.undoBtn.Size = new System.Drawing.Size(127, 87);
             this.undoBtn.TabIndex = 1;
@@ -61,7 +62,7 @@ namespace sdl_persistent_stack
             // redoBtn
             // 
             this.redoBtn.Location = new System.Drawing.Point(957, 18);
-            this.redoBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.redoBtn.Margin = new System.Windows.Forms.Padding(4);
             this.redoBtn.Name = "redoBtn";
             this.redoBtn.Size = new System.Drawing.Size(127, 87);
             this.redoBtn.TabIndex = 2;
@@ -72,7 +73,7 @@ namespace sdl_persistent_stack
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(24, 42);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(6);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(220, 29);
             this.numericUpDown1.TabIndex = 3;
@@ -88,18 +89,28 @@ namespace sdl_persistent_stack
             this.btnPeek.UseVisualStyleBackColor = true;
             this.btnPeek.Click += new System.EventHandler(this.btnPeek_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 24;
+            this.listBox1.Location = new System.Drawing.Point(1090, 123);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(403, 532);
+            this.listBox1.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 676);
+            this.ClientSize = new System.Drawing.Size(1496, 676);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnPeek);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.redoBtn);
             this.Controls.Add(this.undoBtn);
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -115,6 +126,7 @@ namespace sdl_persistent_stack
         private System.Windows.Forms.Button redoBtn;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button btnPeek;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

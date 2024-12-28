@@ -21,6 +21,8 @@ namespace sdl_persistent_stack
 
             numericUpDown1.Minimum = 0;
             numericUpDown1.Maximum = stack.Count - 1;
+
+            UpdateStackView(); // Tampilkan stack saat inisialisasi
         }
 
         private class undoRedoOperation
@@ -93,6 +95,20 @@ namespace sdl_persistent_stack
             }
         }
 
+        private void UpdateStackView()
+        {
+            listBox1.Items.Clear();
+
+            for (int i = stack.Count - 1; i >= 0; i--)
+            {
+                undoRedoOperation operation = stack.PeekFromBottom(i);
+                if (operation != null)
+                {
+                    listBox1.Items.Add($"Versi {i}: {operation.Text}");
+                }
+            }
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (!isUndoRedo)
@@ -102,6 +118,8 @@ namespace sdl_persistent_stack
                 currentPosition = 0;
 
                 numericUpDown1.Maximum = stack.Count - 1;
+
+                UpdateStackView();
             }
         }
 
@@ -121,6 +139,8 @@ namespace sdl_persistent_stack
                 }
 
                 isUndoRedo = false;
+
+                UpdateStackView();
             }
         }
 
@@ -140,6 +160,8 @@ namespace sdl_persistent_stack
                 }
 
                 isUndoRedo = false;
+
+                UpdateStackView();
             }
         }
 
@@ -164,6 +186,8 @@ namespace sdl_persistent_stack
             {
                 MessageBox.Show("Pilih versi yang valid.");
             }
+
+            UpdateStackView();
         }
 
         private void undoBtn_Click(object sender, EventArgs e)
