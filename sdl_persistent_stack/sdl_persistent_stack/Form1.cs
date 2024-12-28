@@ -90,11 +90,12 @@ namespace sdl_persistent_stack
         {
             if (!isUndoRedo)
             {
-                undoRedoOperation operation = new undoRedoOperation(lastText, textBox1.SelectionStart, textBox1.SelectionLength);
+                undoRedoOperation operation = new undoRedoOperation(textBox1.Text, textBox1.SelectionStart, textBox1.SelectionLength);
+                lastText = textBox1.Text;
                 stack = stack.Push(operation);
                 currentPosition = 0;
             }
-            lastText = textBox1.Text;
+            
         }
 
         private void undo()
