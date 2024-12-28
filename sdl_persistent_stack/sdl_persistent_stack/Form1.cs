@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace sdl_persistent_stack
@@ -15,12 +8,19 @@ namespace sdl_persistent_stack
         private PersistentStack<undoRedoOperation> stack;
         private int currentPosition;
         private bool isUndoRedo = false;
-        private string lastText = "";
+
         public Form1()
         {
-            stack = new PersistentStack<undoRedoOperation>();
-            currentPosition = 0;
             InitializeComponent();
+            stack = new PersistentStack<undoRedoOperation>();
+
+            // Tambahkan snapshot awal
+            undoRedoOperation initialOperation = new undoRedoOperation("", 0, 0);
+            stack = stack.Push(initialOperation);
+            currentPosition = 0;
+
+            numericUpDown1.Minimum = 0;
+            numericUpDown1.Maximum = stack.Count - 1;
         }
 
         private class undoRedoOperation
@@ -34,7 +34,6 @@ namespace sdl_persistent_stack
                 Text = text;
                 SelectionStart = selectionStart;
                 SelectionLength = selectionLength;
-
             }
         }
 
@@ -70,14 +69,22 @@ namespace sdl_persistent_stack
                 return new PersistentStack<T>(new Node(value, head));
             }
 
-            public T Peek(int posistion)
+            public T PeekFromTop(int positionFromTop)
             {
                 Node current = head;
-                for (int i = 0; i < posistion && current != null; i++)
+
+                for (int i = 0; i < positionFromTop && current != null; i++)
                 {
                     current = current.Next;
                 }
+
                 return current != null ? current.Value : default(T);
+            }
+
+            public T PeekFromBottom(int positionFromBottom)
+            {
+                int positionFromTop = (Count - 1) - positionFromBottom;
+                return PeekFromTop(positionFromTop);
             }
 
             public int Count
@@ -91,48 +98,74 @@ namespace sdl_persistent_stack
             if (!isUndoRedo)
             {
                 undoRedoOperation operation = new undoRedoOperation(textBox1.Text, textBox1.SelectionStart, textBox1.SelectionLength);
-                lastText = textBox1.Text;
                 stack = stack.Push(operation);
                 currentPosition = 0;
+
+                numericUpDown1.Maximum = stack.Count - 1;
             }
-            
         }
 
         private void undo()
         {
-            if(currentPosition + 1 < stack.Count)
+            if (currentPosition + 1 < stack.Count)
             {
                 isUndoRedo = true;
 
                 currentPosition++;
-                undoRedoOperation operation = stack.Peek(currentPosition);
-                if(operation != null)
+                undoRedoOperation operation = stack.PeekFromTop(currentPosition);
+                if (operation != null)
                 {
                     textBox1.Text = operation.Text;
                     textBox1.SelectionStart = operation.SelectionStart;
                     textBox1.SelectionLength = operation.SelectionLength;
                 }
+
                 isUndoRedo = false;
-                
             }
         }
 
         private void redo()
         {
-            if(currentPosition > 0)
+            if (currentPosition > 0)
             {
                 isUndoRedo = true;
+
                 currentPosition--;
-                undoRedoOperation operation = stack.Peek(currentPosition);
-                if(operation != null)
+                undoRedoOperation operation = stack.PeekFromTop(currentPosition);
+                if (operation != null)
                 {
                     textBox1.Text = operation.Text;
                     textBox1.SelectionStart = operation.SelectionStart;
                     textBox1.SelectionLength = operation.SelectionLength;
                 }
+
                 isUndoRedo = false;
             }
         }
+
+        private void btnPeek_Click(object sender, EventArgs e)
+        {
+            int versionToPeek = (int)numericUpDown1.Value;
+            if (versionToPeek >= 0 && versionToPeek < stack.Count)
+            {
+                undoRedoOperation operation = stack.PeekFromBottom(versionToPeek);
+                if (operation != null)
+                {
+                    textBox1.Text = operation.Text;
+                    textBox1.SelectionStart = operation.SelectionStart;
+                    textBox1.SelectionLength = operation.SelectionLength;
+                }
+                else
+                {
+                    MessageBox.Show("Versi tidak ditemukan di stack.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih versi yang valid.");
+            }
+        }
+
         private void undoBtn_Click(object sender, EventArgs e)
         {
             undo();

@@ -18,3 +18,13 @@ C:\Users\Hans Christian\OneDrive\Desktop\Tugas Semester 3\Project-SDL\sdl_persis
 C:\Users\Hans Christian\OneDrive\Desktop\Tugas Semester 3\Project-SDL\sdl_persistent_stack\sdl_persistent_stack\obj\Debug\sdl_persistent_stack.csproj.CoreCompileInputs.cache
 C:\Users\Hans Christian\OneDrive\Desktop\Tugas Semester 3\Project-SDL\sdl_persistent_stack\sdl_persistent_stack\obj\Debug\sdl_persistent_stack.exe
 C:\Users\Hans Christian\OneDrive\Desktop\Tugas Semester 3\Project-SDL\sdl_persistent_stack\sdl_persistent_stack\obj\Debug\sdl_persistent_stack.pdb
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\sdl_persistent_stack\sdl_persistent_stack\bin\Debug\sdl_persistent_stack.exe.config
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\sdl_persistent_stack\sdl_persistent_stack\bin\Debug\sdl_persistent_stack.exe
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\sdl_persistent_stack\sdl_persistent_stack\bin\Debug\sdl_persistent_stack.pdb
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\sdl_persistent_stack\sdl_persistent_stack\obj\Debug\sdl_persistent_stack.csproj.AssemblyReference.cache
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\sdl_persistent_stack\sdl_persistent_stack\obj\Debug\sdl_persistent_stack.Form1.resources
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\sdl_persistent_stack\sdl_persistent_stack\obj\Debug\sdl_persistent_stack.Properties.Resources.resources
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\sdl_persistent_stack\sdl_persistent_stack\obj\Debug\sdl_persistent_stack.csproj.GenerateResource.cache
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\sdl_persistent_stack\sdl_persistent_stack\obj\Debug\sdl_persistent_stack.csproj.CoreCompileInputs.cache
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\sdl_persistent_stack\sdl_persistent_stack\obj\Debug\sdl_persistent_stack.exe
+G:\Kuliah\iSTTS\Semester 3\matkul\SDL\Project SDL\Project-SDL\sdl_persistent_stack\sdl_persistent_stack\obj\Debug\sdl_persistent_stack.pdb
