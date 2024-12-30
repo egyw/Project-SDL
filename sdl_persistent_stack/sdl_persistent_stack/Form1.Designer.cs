@@ -35,6 +35,8 @@ namespace sdl_persistent_stack
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btnPeek = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnTes = new System.Windows.Forms.Button();
+            this.btnBatch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,13 +46,14 @@ namespace sdl_persistent_stack
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox1.Size = new System.Drawing.Size(1066, 541);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // undoBtn
             // 
-            this.undoBtn.Location = new System.Drawing.Point(821, 18);
+            this.undoBtn.Location = new System.Drawing.Point(790, 18);
             this.undoBtn.Margin = new System.Windows.Forms.Padding(4);
             this.undoBtn.Name = "undoBtn";
             this.undoBtn.Size = new System.Drawing.Size(127, 87);
@@ -61,7 +64,7 @@ namespace sdl_persistent_stack
             // 
             // redoBtn
             // 
-            this.redoBtn.Location = new System.Drawing.Point(957, 18);
+            this.redoBtn.Location = new System.Drawing.Point(955, 19);
             this.redoBtn.Margin = new System.Windows.Forms.Padding(4);
             this.redoBtn.Name = "redoBtn";
             this.redoBtn.Size = new System.Drawing.Size(127, 87);
@@ -98,11 +101,37 @@ namespace sdl_persistent_stack
             this.listBox1.Size = new System.Drawing.Size(403, 532);
             this.listBox1.TabIndex = 5;
             // 
+            // btnTes
+            // 
+            this.btnTes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTes.Location = new System.Drawing.Point(1090, 18);
+            this.btnTes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTes.Name = "btnTes";
+            this.btnTes.Size = new System.Drawing.Size(403, 40);
+            this.btnTes.TabIndex = 6;
+            this.btnTes.Text = "TEST";
+            this.btnTes.UseVisualStyleBackColor = true;
+            this.btnTes.Click += new System.EventHandler(this.btnTes_Click);
+            // 
+            // btnBatch
+            // 
+            this.btnBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatch.Location = new System.Drawing.Point(1090, 66);
+            this.btnBatch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBatch.Name = "btnBatch";
+            this.btnBatch.Size = new System.Drawing.Size(403, 40);
+            this.btnBatch.TabIndex = 7;
+            this.btnBatch.Text = "BATCH INSERT";
+            this.btnBatch.UseVisualStyleBackColor = true;
+            this.btnBatch.Click += new System.EventHandler(this.btnBatch_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1496, 676);
+            this.Controls.Add(this.btnBatch);
+            this.Controls.Add(this.btnTes);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnPeek);
             this.Controls.Add(this.numericUpDown1);
@@ -127,6 +156,8 @@ namespace sdl_persistent_stack
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button btnPeek;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnTes;
+        private System.Windows.Forms.Button btnBatch;
     }
 }
 
